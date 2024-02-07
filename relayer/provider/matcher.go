@@ -180,7 +180,7 @@ func checkTendermintMisbehaviour(
 	)
 
 	if cachedHeader == nil {
-		header, err := counterparty.QueryIBCHeader(ctx, proposedHeader.Header.Height)
+		header, err := counterparty.QueryIBCHeader(ctx, proposedHeader.Header.Height+1)
 		if err != nil {
 			return nil, err
 		}
